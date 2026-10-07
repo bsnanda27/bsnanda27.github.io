@@ -1,92 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nandakumar — M.E. VLSI Design student at Anna University, Chennai. Explore digital design, RTL, CMOS circuits and processor projects.">
-  <meta name="theme-color" content="#f4f1e9">
-  <title>Nandakumar — VLSI Design</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23f4f1e9'/%3E%3Ctext x='9' y='29' font-family='Georgia' font-size='29' fill='%23454837'%3En%3C/text%3E%3C/svg%3E">
+  <meta name="description" content="Nandakumar — VLSI design, digital hardware and research. Between transistors and possibilities.">
+  <meta name="theme-color" content="#f2f2ef">
+  <title>Nandakumar — VLSI &amp; Digital Hardware</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header wrap">
-    <a class="wordmark" href="#home" aria-label="Nandakumar, home">n<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Connect</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nandakumar, home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>NANDAKUMAR<span class="brand-slash"> /</span> VLSI</span>
+    </a>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#work">Projects</a><a href="#research">Research</a><a href="#education">Education</a><a href="#contact">Contact</a>
     </nav>
-    <span class="header-note">Chennai, India</span>
+    <div class="header-actions">
+      <span class="local-clock"><span class="clock-led" aria-hidden="true"></span><span>CHENNAI · IST</span><time id="clock">--:--</time></span>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch color mode">◐</button>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
   </header>
+
   <main id="main">
-    <section class="hero wrap" id="home" aria-labelledby="hero-title">
-      <div class="hero-top"><span class="eyebrow">VLSI DESIGN · PERSONAL PORTFOLIO</span><span class="edition">A collection of hardware explorations</span></div>
-      <h1 id="hero-title" aria-label="Nandakumar"><span class="animated-name" aria-hidden="true"><span class="name-letter" style="--letter-index:0">N</span><span class="name-letter" style="--letter-index:1">a</span><span class="name-letter" style="--letter-index:2">n</span><span class="name-letter" style="--letter-index:3">d</span><span class="name-letter" style="--letter-index:4">a</span><span class="name-letter" style="--letter-index:5">k</span><span class="name-letter" style="--letter-index:6">u</span><span class="name-letter" style="--letter-index:7">m</span><span class="name-letter" style="--letter-index:8">a</span><span class="name-letter" style="--letter-index:9">r</span><span class="name-letter name-period" style="--letter-index:10">.</span></span></h1>
-      <div class="hero-bottom">
-        <p class="hero-statement">Between transistors<br><em>and possibilities.</em></p>
-        <div class="hero-bio"><p>I’m a VLSI enthusiast pursuing an M.E. in VLSI Design at Anna University, Chennai. My interests span digital hardware, processor architecture and CMOS circuit design.</p><a class="text-link" href="#work">Explore selected work <span aria-hidden="true">+</span></a></div>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-index mono"><span>PERSONAL PORTFOLIO</span><span>CHENNAI, INDIA&nbsp; / &nbsp;13°04′N 80°17′E</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="red-square"></span> VLSI DESIGN · DIGITAL HARDWARE</p>
+          <h1 id="hero-title">Nandakumar<span class="period">.</span></h1>
+          <p class="hero-role">VLSI design &amp; digital hardware</p>
+          <div class="hero-lower">
+            <p class="tagline">Between transistors and possibilities.</p>
+            <div class="hero-intro"><p>M.E. VLSI Design · Anna University, Chennai.<br>I work across RTL, processor architecture and CMOS circuits.</p></div>
+          </div>
+          <div class="hero-actions"><a class="primary-action" href="#work">View projects <span aria-hidden="true">↓</span></a><a href="mailto:bsnanda2003@gmail.com">Email me ↗</a><a href="https://github.com/bsnanda27" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+
+        </div>
+        <div class="hero-art silicon-study">
+          <div class="art-label mono"><span>FIG. 01</span><span>INSIDE THE HARDWARE</span></div>
+          <button class="chip-toggle" id="chip-toggle" type="button" aria-pressed="false" aria-label="Expand the chip layers">
+            <svg class="silicon-scene" viewBox="0 0 520 460" aria-hidden="true">
+<defs>
+ <linearGradient id="package-metal" x2="1" y2="1"><stop stop-color="#444641"/><stop offset=".5" stop-color="#242622"/><stop offset="1" stop-color="#10120f"/></linearGradient>
+ <linearGradient id="routing-metal" x2="1" y2="1"><stop stop-color="#edece5"/><stop offset=".5" stop-color="#a5a79c"/><stop offset="1" stop-color="#d7d8cd"/></linearGradient>
+ <linearGradient id="die-metal" x2="1" y2="1"><stop stop-color="#494d45"/><stop offset=".6" stop-color="#20251e"/><stop offset="1" stop-color="#363c30"/></linearGradient>
+ <radialGradient id="silicon-shadow"><stop stop-opacity=".22"/><stop offset="1" stop-opacity="0"/></radialGradient>
+</defs>
+<ellipse class="silicon-shadow" cx="260" cy="370" rx="212" ry="52" fill="url(#silicon-shadow)"/>
+<g fill="none" stroke="currentColor" opacity=".12" stroke-width=".7"><path d="M28 300l232-116 232 116-232 116Z"/><path d="M28 320l232-116 232 116M260 164v264" stroke-dasharray="3 6"/></g>
+<g class="silicon-layer silicon-package">
+ <path d="M60 270l200-100 200 100v13L260 383 60 283Z" fill="#191b17" stroke="#6b6d64"/>
+ <g transform="matrix(1 .5 -1 .5 260 270)">
+ <rect x="-100" y="-100" width="200" height="200" rx="7" fill="url(#package-metal)" stroke="#81847a"/>
+ <g stroke="#a5a89c" stroke-width="5"><path d="M-80 -102v-14M-80 102v14M-102 -80h-14M102 -80h14"/><path d="M-64 -102v-14M-64 102v14M-102 -64h-14M102 -64h14"/><path d="M-48 -102v-14M-48 102v14M-102 -48h-14M102 -48h14"/><path d="M-32 -102v-14M-32 102v14M-102 -32h-14M102 -32h14"/><path d="M-16 -102v-14M-16 102v14M-102 -16h-14M102 -16h14"/><path d="M0 -102v-14M0 102v14M-102 0h-14M102 0h14"/><path d="M16 -102v-14M16 102v14M-102 16h-14M102 16h14"/><path d="M32 -102v-14M32 102v14M-102 32h-14M102 32h14"/><path d="M48 -102v-14M48 102v14M-102 48h-14M102 48h14"/><path d="M64 -102v-14M64 102v14M-102 64h-14M102 64h14"/><path d="M80 -102v-14M80 102v14M-102 80h-14M102 80h14"/></g>
+ <rect x="-87" y="-87" width="174" height="174" rx="4" fill="none" stroke="#666c5c"/>
+ <circle cx="-77" cy="77" r="4" fill="#e15a46"/>
+ </g>
+</g>
+<g class="silicon-layer silicon-routing">
+ <path d="M92 253l168-84 168 84v7l-168 84-168-84Z" fill="#85897d"/>
+ <g transform="matrix(1 .5 -1 .5 260 253)">
+ <rect x="-84" y="-84" width="168" height="168" rx="3" fill="url(#routing-metal)" stroke="#e1e2d8"/>
+ <g fill="none" stroke="#747d65" stroke-width=".9"><path d="M-80 -66h18l12 12h100l12-12h18M-66 -80v18l12 12v100l-12 12v18"/><path d="M-80 -44h18l12 12h100l12-12h18M-44 -80v18l12 12v100l-12 12v18"/><path d="M-80 -22h18l12 12h100l12-12h18M-22 -80v18l12 12v100l-12 12v18"/><path d="M-80 0h18l12 12h100l12-12h18M0 -80v18l12 12v100l-12 12v18"/><path d="M-80 22h18l12 12h100l12-12h18M22 -80v18l12 12v100l-12 12v18"/><path d="M-80 44h18l12 12h100l12-12h18M44 -80v18l12 12v100l-12 12v18"/><path d="M-80 66h18l12 12h100l12-12h18M66 -80v18l12 12v100l-12 12v18"/></g>
+ <rect x="-57" y="-57" width="114" height="114" fill="none" stroke="#696f61"/>
+ </g>
+</g>
+<g class="silicon-layer silicon-die">
+ <path d="M130 238l130-65 130 65v9l-130 65-130-65Z" fill="#151b12" stroke="#7d8475" stroke-width=".6"/>
+ <g transform="matrix(1 .5 -1 .5 260 238)">
+ <rect x="-65" y="-65" width="130" height="130" rx="2" fill="url(#die-metal)" stroke="#a3aa98"/>
+ <rect x="-57" y="-57" width="114" height="114" fill="none" stroke="#707b61" stroke-width=".7"/>
+ <g fill="#58634e" stroke="#a4ae98" stroke-width=".5"><rect x="-49" y="-49" width="51" height="48"/><rect x="8" y="-49" width="41" height="19"/><rect x="8" y="-24" width="41" height="23"/><rect x="-49" y="6" width="26" height="43"/><rect x="-17" y="6" width="40" height="43"/></g>
+ <rect x="29" y="6" width="20" height="43" fill="#c94c3b" stroke="#ef9781" stroke-width=".5"/>
+ <g fill="none" stroke="#b9c2ab" stroke-width=".55" opacity=".7"><path d="M11 -44h35M-46 11h20M-13 11h32"/><path d="M11 -40h35M-46 15h20M-13 15h32"/><path d="M11 -36h35M-46 19h20M-13 19h32"/><path d="M11 -32h35M-46 23h20M-13 23h32"/></g>
+ <text x="-24" y="-21" text-anchor="middle" fill="#e9edde" font-family="monospace" font-size="7" letter-spacing="1">LOGIC</text>
+ </g>
+</g>
+</svg>
+            <span class="chip-action"><span id="chip-hint">Explore the layers</span><span class="chip-action-icon" aria-hidden="true">↗</span></span>
+          </button>
+          <div class="chip-inspector" aria-label="Explore chip layers"><button type="button" data-layer="die" aria-pressed="false">01 Silicon</button><button type="button" data-layer="routing" aria-pressed="false">02 Routing</button><button type="button" data-layer="package" aria-pressed="false">03 Package</button></div>
+          <div class="silicon-caption"><p id="chip-description" aria-live="polite">A small structure. A connected system.</p><span class="mono" id="chip-state">ASSEMBLED / 01</span></div>
+        </div>
       </div>
-      <div class="field-note"><span class="note-label">A note on my work</span><p>Small circuits.<br>Thoughtful architectures.<br><em>Always something to explore.</em></p><span class="note-signature">— Nandakumar</span></div>
-      <div class="hero-foot"><span>Digital design / RTL / CMOS</span><span>Industry &amp; research interests</span></div>
+      <div class="hero-footer mono"><span>01 — 05</span><span>RTL&nbsp; / &nbsp;CMOS&nbsp; / &nbsp;ARCHITECTURE</span><a href="#work">SELECTED PROJECTS <span aria-hidden="true">↓</span></a></div>
     </section>
 
-    <section class="section wrap about" id="about" aria-labelledby="about-title">
-      <div class="section-label"><span class="section-number">01</span><h2 id="about-title">A little about me</h2></div>
-      <div class="section-body"><p class="large-copy">Exploring hardware, from<br class="desktop-break"> <em>transistors to architectures.</em></p><p class="body-copy">My work brings together digital design, RTL development, simulation and circuit design. I’m interested in how design choices shape hardware behaviour, and in using experiments and clear technical communication to understand those choices.</p><p class="body-copy">I’m interested in both VLSI industry opportunities and research collaborations.</p>
-        <div class="education"><h3 class="eyebrow">EDUCATION</h3><div class="education-row"><div><h4>M.E. in VLSI Design</h4><p>Anna University · Chennai</p></div><span>Jul 2026 — Present</span></div><div class="education-row"><div><h4>B.Tech. in Electrical and Computer Engineering</h4><p>Amrita School of Engineering · Coimbatore</p></div><span>Sep 2021 — Aug 2025</span></div></div>
+    <div class="signal-strip mono" aria-label="Portfolio areas"><span>RESEARCH</span><span class="signal-dot">●</span><span>PROCESSORS</span><span class="signal-dot">●</span><span>CMOS</span><span class="signal-dot">●</span><span>RTL</span><span class="signal-dot">●</span><span>VERIFICATION</span></div>
+
+    <section class="section work-section" id="work" aria-labelledby="work-title">
+      <div class="work-top reveal"><div><p class="section-index mono">01 / SELECTED WORK</p><h2 id="work-title">Selected projects<span class="period">.</span></h2></div><p class="section-aside">From AI workloads to processors and CMOS circuits. Open a project for the design context.</p></div>
+      <div class="project-list">
+        <article class="project-card reveal project-dark" data-project-card>
+          <div class="project-code mono"><span>PRJ / 001</span><span>DIGITAL HARDWARE</span><span>ACTIVE</span></div>
+          <div class="project-number dot-mini" aria-hidden="true">01</div>
+          <div class="project-main">
+            <h3>TokenFold</h3>
+            <p>Hardware for selecting and compacting Vision Transformer tokens. Connecting a software reference to RTL, data movement and verification.</p>
+            <div class="chip-tags mono"><span>RTL</span><span>ViT</span><span>DMA</span><span>VERIFICATION</span></div>
+          </div>
+          <div class="project-visual token-visual" aria-hidden="true">
+            <div class="token-path"></div>
+            <span class="token active"></span><span class="token"></span><span class="token active"></span><span class="token"></span><span class="token active"></span><span class="token"></span>
+          </div>
+          <button class="project-open" type="button" data-dialog="tokenfold-dialog" aria-haspopup="dialog">Read project <span aria-hidden="true">↗</span></button>
+        </article>
+
+        <article class="project-card reveal project-light" data-project-card>
+          <div class="project-code mono"><span>PRJ / 002</span><span>PROCESSOR DESIGN</span><span>32-BIT</span></div>
+          <div class="project-number dot-mini" aria-hidden="true">02</div>
+          <div class="project-main">
+            <h3>RV32I processor</h3>
+            <p>A 32-bit RISC-V processor built from scratch: instruction behavior, RTL implementation, simulation and synthesis.</p>
+            <div class="chip-tags mono"><span>RISC-V</span><span>RTL</span><span>SYNTHESIS</span></div>
+          </div>
+          <div class="project-visual cpu-visual" aria-hidden="true">
+            <div class="cpu-core"><span>ALU</span></div>
+            <span class="bus b1"></span><span class="bus b2"></span><span class="bus b3"></span><span class="bus b4"></span>
+            <span class="pad p1"></span><span class="pad p2"></span><span class="pad p3"></span><span class="pad p4"></span>
+          </div>
+          <button class="project-open" type="button" data-dialog="rv32i-dialog" aria-haspopup="dialog">Read project <span aria-hidden="true">↗</span></button>
+        </article>
+
+        <article class="project-card reveal project-red" data-project-card>
+          <div class="project-code mono"><span>PRJ / 003</span><span>CMOS CIRCUIT DESIGN</span><span>RESEARCH</span></div>
+          <div class="project-number dot-mini" aria-hidden="true">03</div>
+          <div class="project-main">
+            <h3>HFA14 adder</h3>
+            <p>Ongoing research in CMOS adder design. Technical details and results are reserved for future publication.</p>
+            <div class="chip-tags mono"><span>CMOS</span><span>CIRCUIT DESIGN</span><span>RESEARCH</span></div>
+          </div>
+          <div class="project-visual transistor-visual" aria-hidden="true">
+            <div class="rail rail-top"></div><div class="rail rail-bottom"></div>
+            <div class="mos m1"></div><div class="mos m2"></div><div class="mos m3"></div><div class="mos m4"></div>
+            <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span>
+          </div>
+          <button class="project-open" type="button" data-dialog="hfa14-dialog" aria-haspopup="dialog">Research overview <span aria-hidden="true">↗</span></button>
+        </article>
       </div>
     </section>
 
-    <section class="section wrap work" id="work" aria-labelledby="work-title">
-      <div class="section-label"><span class="section-number">02</span><h2 id="work-title">Selected work</h2></div>
-      <div class="section-body">
-        <p class="work-intro">Three explorations. Different scales.<br><em>The same curiosity for hardware.</em></p>
-        <article class="project project-token"><div class="project-meta"><span>01 / DIGITAL HARDWARE</span><span class="project-mark" aria-hidden="true">TF</span></div><h3>TokenFold</h3><p>Exploring how hardware can select and compact tokens for Vision Transformer workloads. The project connects a software reference with RTL development, streaming data movement and system-level verification.</p><div class="project-question">How much work happens <em>before</em> the computation?</div><div class="tags"><span>RTL design</span><span>Token selection</span><span>Verification</span></div><a class="project-button" href="#tokenfold-detail" data-project="tokenfold-detail" aria-haspopup="dialog">Explore project <span aria-hidden="true">+</span></a></article>
-        <article class="project project-processor"><div class="project-meta"><span>02 / PROCESSOR DESIGN</span><span class="project-mark" aria-hidden="true">32</span></div><h3>RV32I processor</h3><p>A processor designed from scratch around the RISC-V RV32I instruction set. The scope follows the journey from architectural behaviour to RTL, simulation and synthesis.</p><div class="project-question">From an instruction <em>to a circuit.</em></div><div class="tags"><span>RISC-V</span><span>Architecture</span><span>RTL to synthesis</span></div><a class="project-button" href="#rv32i-detail" data-project="rv32i-detail" aria-haspopup="dialog">Explore project <span aria-hidden="true">+</span></a></article>
-        <article class="project research"><div class="project-meta"><span>03 / CMOS CIRCUIT DESIGN</span><span class="research-label">Ongoing research</span></div><h3>HFA14 adder design</h3><p>Ongoing research in CMOS adder design.</p><p class="research-note">Technical details and results are reserved for future publication.</p><div class="tags"><span>CMOS</span><span>Circuit design</span><span>Research</span></div><a class="project-button" href="#hfa14-detail" data-project="hfa14-detail" aria-haspopup="dialog">Research overview <span aria-hidden="true">+</span></a></article>
+    <section class="section credentials-section" id="education" aria-labelledby="education-title">
+      <div class="credentials-column reveal"><p class="section-index mono">02 / EDUCATION</p><h2 id="education-title">Education</h2>
+        <div class="education-list">
+          <article class="education-item"><span class="education-date mono">JUL 2026 — PRESENT</span><h3>M.E. in VLSI Design</h3><p>Anna University <span>·</span> Chennai</p></article>
+          <article class="education-item"><span class="education-date mono">SEP 2021 — AUG 2025</span><h3>B.Tech. in Electrical and<br>Computer Engineering</h3><p>Amrita School of Engineering <span>·</span> Coimbatore</p></article>
+        </div>
+      </div>
+      <div class="credentials-column skills-column reveal"><p class="section-index mono">TOOLKIT</p><h2>Skills &amp; tools</h2>
+        <div class="skill-groups">
+          <div class="skill-group"><h3 class="mono">DESIGN</h3><p>Digital design<span> / </span>RTL design<span> / </span>Architecture &amp; interfaces<span> / </span>FPGA implementation</p></div>
+          <div class="skill-group"><h3 class="mono">ANALYSIS</h3><p>Simulation &amp; debugging<span> / </span>CMOS &amp; circuit design<span> / </span>Synthesis &amp; timing<span> / </span>Research &amp; communication</p></div>
+          <div class="skill-group"><h3 class="mono">LANGUAGES &amp; TOOLS</h3><p>Verilog<span> / </span>SystemVerilog<span> / </span>Vivado<span> / </span>Cadence<span> / </span>Xschem<span> / </span>Python<span> / </span>OpenLane</p></div>
+        </div>
       </div>
     </section>
 
-    <section class="section wrap skills" id="skills" aria-labelledby="skills-title">
-      <div class="section-label"><span class="section-number">03</span><h2 id="skills-title">Skills &amp; tools</h2></div>
-      <div class="section-body"><p class="skills-intro">The disciplines and tools behind my work.</p>
-        <div class="skill-grid"><div><h3>Digital hardware</h3><ul><li>Digital design</li><li>RTL design</li><li>Simulation &amp; debugging</li><li>Architecture &amp; interfaces</li><li>FPGA implementation</li></ul></div><div><h3>Circuits &amp; analysis</h3><ul><li>CMOS &amp; circuit design</li><li>Synthesis &amp; timing</li><li>Research &amp; communication</li></ul></div></div>
-        <div class="tool-box"><div class="tool-row"><h3>Languages</h3><p>Verilog <span>/</span> SystemVerilog <span>/</span> Python</p></div><div class="tool-row"><h3>Design tools</h3><p>Vivado <span>/</span> Cadence <span>/</span> Xschem <span>/</span> OpenLane</p></div></div>
+    <section class="section research-section" id="research" aria-labelledby="research-title">
+      <div class="section-heading reveal"><p class="section-index mono">03 / RESEARCH INTERESTS</p><h2 id="research-title">Research interests</h2><p class="section-aside">A few connected areas of study, from architecture-level questions down to the circuit.</p></div>
+      <div class="direction-list">
+        <article class="direction reveal"><span class="direction-number mono">01</span><h3>Hardware for vision models</h3><p>Exploring selective token processing and the movement of data in Vision Transformer workloads.</p><span class="direction-mark" aria-hidden="true">↗</span></article>
+        <article class="direction reveal"><span class="direction-number mono">02</span><h3>Processor architecture</h3><p>Following instruction-set behavior through RTL, simulation and synthesized hardware.</p><span class="direction-mark" aria-hidden="true">↗</span></article>
+        <article class="direction reveal"><span class="direction-number mono">03</span><h3>CMOS circuit design</h3><p>Studying circuit-level choices, with ongoing research in adder design.</p><span class="direction-mark" aria-hidden="true">↗</span></article>
       </div>
     </section>
 
-    <section class="contact wrap" id="contact" aria-labelledby="contact-title"><div><span class="eyebrow">04 / CONNECT</span><h2 id="contact-title">Let’s talk<br><em>hardware.</em></h2></div><div class="contact-body"><p>For VLSI opportunities, research collaborations or a conversation about hardware, send me an email or connect on LinkedIn. Explore my work on GitHub and my writing on Medium.</p><div class="contact-links"><a class="email-link" href="mailto:bsnanda2003@gmail.com">Email <span>bsnanda2003@gmail.com</span></a><a href="https://www.linkedin.com/in/bsnanda27/" target="_blank" rel="noopener noreferrer">LinkedIn <span>@bsnanda27</span><span class="new-tab">Opens in a new tab</span></a><a href="https://github.com/bsnanda27" target="_blank" rel="noopener noreferrer">GitHub <span>@bsnanda27</span><span class="new-tab">Opens in a new tab</span></a><a href="https://medium.com/@siliconscript" target="_blank" rel="noopener noreferrer">Medium <span>@siliconscript</span><span class="new-tab">Opens in a new tab</span></a></div></div></section>
+    <details class="method-disclosure"><summary>How I approach a hardware design <span aria-hidden="true">+</span></summary>
+    <section class="method-section" aria-labelledby="method-title">
+      <div class="method-heading reveal"><p class="section-index mono">03 / WORKING METHOD</p><h2 id="method-title">From idea<br>to <span>evidence.</span></h2><p>Design becomes clearer when each layer can be inspected.</p></div>
+      <ol class="method-flow"><li class="reveal"><span class="method-index mono">01</span><strong>Model</strong><small>Define behavior</small></li><li class="reveal"><span class="method-index mono">02</span><strong>Describe</strong><small>Build the RTL</small></li><li class="reveal"><span class="method-index mono">03</span><strong>Simulate</strong><small>Check the details</small></li><li class="reveal"><span class="method-index mono">04</span><strong>Synthesize</strong><small>Study the result</small></li></ol>
+      <svg class="method-trace" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30h1120l18-18h62" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="0" cy="30" r="3" fill="var(--accent)"/><circle cx="400" cy="30" r="3" fill="var(--accent)"/><circle cx="800" cy="30" r="3" fill="var(--accent)"/><circle cx="1120" cy="30" r="3" fill="var(--accent)"/></svg>
+    </section>
+
+    </details>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-head reveal"><p class="section-index mono">04 / CONNECT</p><h2 id="contact-title">Let’s talk hardware.</h2><p>For VLSI opportunities, research conversations or a thoughtful exchange about hardware.</p></div>
+      <div class="contact-links reveal">
+        <a href="mailto:bsnanda2003@gmail.com"><span class="contact-kind mono">EMAIL</span><span class="contact-value">bsnanda2003@gmail.com</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a href="https://medium.com/@siliconscript" target="_blank" rel="noopener noreferrer"><span class="contact-kind mono">WRITING</span><span class="contact-value">Medium <small>@siliconscript</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a href="https://github.com/bsnanda27" target="_blank" rel="noopener noreferrer"><span class="contact-kind mono">CODE</span><span class="contact-value">GitHub <small>@bsnanda27</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/bsnanda27/" target="_blank" rel="noopener noreferrer"><span class="contact-kind mono">PROFILE</span><span class="contact-value">LinkedIn <small>@bsnanda27</small></span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
   </main>
-  <div class="project-details">
-    <noscript><p class="wrap">Project details are shown below. Enable JavaScript to view them as pop-ups.</p></noscript>
-    <dialog open id="tokenfold-detail" class="project-dialog" aria-labelledby="tokenfold-title">
-      <div class="dialog-bar"><span class="eyebrow">PROJECT NOTES / 01</span><button class="dialog-close" type="button" aria-label="Close TokenFold project details">Close <span aria-hidden="true">×</span></button></div>
-      <div class="dialog-content"><span class="dialog-category">Digital hardware · Vision Transformers</span><h2 id="tokenfold-title" tabindex="-1">TokenFold<span>.</span></h2><p class="dialog-lead">Selecting what matters.<br><em>Understanding the cost of moving it.</em></p>
-        <section><h3>The idea</h3><p>Vision Transformers represent an image as a sequence of tokens. TokenFold explores a hardware sidecar that selects tokens and compacts their embedding rows before downstream computation. Its aim is to reduce the work passed to later stages while accounting for the cost of selection and data movement.</p></section>
-        <figure class="flow-figure"><figcaption>Conceptual selection flow</figcaption><ol class="concept-flow"><li><strong>Score</strong><span>Token importance</span></li><li><strong>Select</strong><span>Retain chosen tokens</span></li><li><strong>Compact</strong><span>Pack embedding rows</span></li><li><strong>Compute</strong><span>Downstream workload</span></li></ol><p>Scores guide selection; retained embedding rows preserve their values and order.</p></figure>
-        <section><h3>Design focus</h3><div class="detail-grid"><div><h4>Selection &amp; compaction</h4><p>Translate reference behaviour into hardware, preserving selected rows and their original-token correspondence.</p></div><div><h4>Streaming behaviour</h4><p>Handle valid/ready transfers and backpressure so that accepted data remains consistent through the pipeline.</p></div><div><h4>Control &amp; data movement</h4><p>Connect configuration, status and DMA behaviour with the hardware datapath.</p></div><div><h4>Verification</h4><p>Compare RTL behaviour with a software reference, then check the integrated data path in system simulation.</p></div></div></section>
-        <section class="detail-note"><h3>The engineering question</h3><p>Fewer tokens do not automatically mean a faster system. The benefit must outweigh selection and transfer overhead. Functional correctness and end-to-end performance are separate questions; full-model speedup and accuracy preservation are not claimed here.</p></section>
-        <section><h3>What this project brings together</h3><p>RTL design, software-reference modelling, handshake debugging, hardware/software integration and careful interpretation of benchmark results.</p></section>
-        <div class="dialog-footer"><span>RTL · Streaming · Verification</span><button type="button" class="dialog-close">Back to portfolio</button></div>
-      </div>
-    </dialog>
-    <dialog open id="rv32i-detail" class="project-dialog" aria-labelledby="rv32i-title">
-      <div class="dialog-bar"><span class="eyebrow">PROJECT NOTES / 02</span><button class="dialog-close" type="button" aria-label="Close RV32I project details">Close <span aria-hidden="true">×</span></button></div>
-      <div class="dialog-content"><span class="dialog-category">Processor architecture · RTL to synthesis</span><h2 id="rv32i-title" tabindex="-1">RV32I processor<span>.</span></h2><p class="dialog-lead">An architecture on paper.<br><em>A processor in logic.</em></p>
-        <section><h3>The project</h3><p>A from-scratch processor design targeting the RISC-V RV32I instruction set, with a scope spanning RTL development, simulation and synthesis. It connects instruction-level behaviour with the logic needed to execute a program.</p></section>
-        <section><h3>Reading the architecture</h3><p>RV32I is the base 32-bit integer instruction set of RISC-V. Its architectural behaviour includes arithmetic and logic, loads and stores, branches and jumps. A processor implementation translates these instructions into control signals and data movement.</p></section>
-        <figure class="flow-figure processor-flow"><figcaption>Conceptual instruction lifecycle</figcaption><ol class="concept-flow"><li><strong>Fetch</strong><span>Read an instruction</span></li><li><strong>Decode</strong><span>Interpret the operation</span></li><li><strong>Execute</strong><span>Compute or access memory</span></li><li><strong>Update</strong><span>Registers &amp; next address</span></li></ol><p>This illustrates instruction behaviour, not a claim about the processor’s pipeline stages.</p></figure>
-        <section><h3>Design considerations</h3><div class="detail-grid"><div><h4>Datapath &amp; control</h4><p>How register values, immediate operands, arithmetic logic and control decisions work together.</p></div><div><h4>Program flow</h4><p>How instructions determine the next program-counter value, including branch and jump behaviour.</p></div><div><h4>Simulation &amp; debugging</h4><p>How instruction behaviour can be checked in testbenches and traced through waveforms.</p></div><div><h4>Synthesis &amp; timing</h4><p>How RTL becomes a logic netlist, and how synthesis reports connect design choices with implementation constraints.</p></div></div></section>
-        <section class="detail-note"><h3>What this project connects</h3><p>Computer architecture, RTL design, waveform-based debugging and the transition from behavioural design to synthesized logic.</p></section>
-        <div class="dialog-footer"><span>Architecture · RTL · Simulation · Synthesis</span><button type="button" class="dialog-close">Back to portfolio</button></div>
-      </div>
-    </dialog>
-    <dialog open id="hfa14-detail" class="project-dialog research-dialog" aria-labelledby="hfa14-title">
-      <div class="dialog-bar"><span class="eyebrow">RESEARCH NOTES / 03</span><button class="dialog-close" type="button" aria-label="Close HFA14 project details">Close <span aria-hidden="true">×</span></button></div>
-      <div class="dialog-content"><span class="dialog-category">CMOS circuit design · Ongoing research</span><h2 id="hfa14-title" tabindex="-1">HFA14 adder<span>.</span></h2><p class="dialog-lead">A research chapter<br><em>still being written.</em></p><section><h3>Public overview</h3><p>Ongoing research in CMOS adder design. Schematics, transistor dimensions, design methodology and measured results are reserved for future publication.</p></section><div class="dialog-footer"><span>CMOS · Circuit design · Research</span><button type="button" class="dialog-close">Back to portfolio</button></div></div>
-    </dialog>
+
+  <footer class="site-footer mono"><a class="footer-brand" href="#top">N / VLSI</a><span>BETWEEN TRANSISTORS AND POSSIBILITIES.</span><span>© <span id="year">2026</span> NANDAKUMAR</span><a href="#top">BACK TO TOP ↑</a></footer>
+
+  <div class="dialog-stack">
+    <dialog open class="project-dialog" id="tokenfold-dialog" aria-labelledby="tokenfold-title"><div class="dialog-top mono"><span>PROJECT NOTE / 01</span><button class="dialog-close" type="button" aria-label="Close project notes">CLOSE <span aria-hidden="true">×</span></button></div><div class="dialog-body"><p class="section-index mono">DIGITAL HARDWARE · VISION TRANSFORMERS</p><h2 id="tokenfold-title" tabindex="-1">TokenFold<span class="period">.</span></h2><p class="dialog-lede">Selecting what matters.<br><span>Understanding the cost of moving it.</span></p><p>TokenFold explores hardware support for token selection and compaction in Vision Transformer workloads. The project connects a software-level reference with RTL development, streaming data movement and system-level verification.</p><div class="project-flow" aria-label="TokenFold conceptual workflow"><span>01 / SCORE</span><span>02 / SELECT</span><span>03 / COMPACT</span><span>04 / COMPUTE</span></div>
+ <div class="project-detail-grid">
+ <section><span class="mono">A / PURPOSE</span><h3>Work before computation</h3><p>Vision Transformer workloads process sequences of tokens. TokenFold explores selecting useful tokens and compacting their embedding rows before downstream computation.</p></section>
+ <section><span class="mono">B / DATA MOVEMENT</span><h3>Keep the sequence coherent</h3><p>Selection must preserve the association between a retained embedding row and its original token. Streaming interfaces connect this behavior to the surrounding system.</p></section>
+ <section><span class="mono">C / VERIFICATION</span><h3>Reference to RTL</h3><p>The software reference gives a behavioral baseline. RTL and system simulation help examine whether selection, transfer and control remain consistent together.</p></section>
+ <section><span class="mono">D / DESIGN QUESTION</span><h3>Account for overhead</h3><p>Reducing the token count is only one part of the problem. The time spent selecting and moving data must be considered alongside the computation it saves.</p></section>
+ </div><p class="project-detail-note">This overview presents the project's purpose and engineering questions; performance figures are omitted until they can be shared with supporting measurements.</p><div class="dialog-summary"><span class="mono">PROJECT LENS</span><p>What needs to be selected, moved and checked before the next computation?</p></div><div class="tags"><span>RTL DESIGN</span><span>STREAMING DATA</span><span>VERIFICATION</span></div></div></dialog>
+    <dialog open class="project-dialog" id="rv32i-dialog" aria-labelledby="rv32i-title"><div class="dialog-top mono"><span>PROJECT NOTE / 02</span><button class="dialog-close" type="button" aria-label="Close project notes">CLOSE <span aria-hidden="true">×</span></button></div><div class="dialog-body"><p class="section-index mono">PROCESSOR DESIGN · RISC-V</p><h2 id="rv32i-title" tabindex="-1">RV32I processor<span class="period">.</span></h2><p class="dialog-lede">From instruction behavior<br><span>to synthesized hardware.</span></p><p>A processor built from scratch around the RISC-V RV32I instruction set. The work follows the design from architectural behavior into RTL, then through simulation and synthesis.</p><div class="project-flow" aria-label="RV32I conceptual instruction flow"><span>01 / FETCH</span><span>02 / DECODE</span><span>03 / EXECUTE</span><span>04 / UPDATE</span></div>
+ <div class="project-detail-grid">
+ <section><span class="mono">A / ARCHITECTURE</span><h3>An instruction becomes behavior</h3><p>The RV32I base integer instruction set defines the visible behavior of the processor. Instructions connect register operations, arithmetic, memory access and program control.</p></section>
+ <section><span class="mono">B / IMPLEMENTATION</span><h3>Datapath and control</h3><p>Register values, immediate values and arithmetic logic form the datapath. Control decisions coordinate how these pieces implement each instruction.</p></section>
+ <section><span class="mono">C / SIMULATION</span><h3>Follow the state</h3><p>Testbenches, instruction traces and waveform debugging provide ways to inspect register updates, memory operations and changes to the program counter.</p></section>
+ <section><span class="mono">D / SYNTHESIS</span><h3>From RTL to logic</h3><p>Synthesis connects the RTL description to a logic implementation. The resulting structure and timing reports make the consequences of design choices easier to study.</p></section>
+ </div><p class="project-detail-note">The flow above is conceptual; it does not specify a pipeline depth or cycle count.</p><div class="dialog-summary"><span class="mono">PROJECT LENS</span><p>Make the relationship between an instruction and its hardware implementation visible.</p></div><div class="tags"><span>RISC-V</span><span>RTL</span><span>SIMULATION</span><span>SYNTHESIS</span></div></div></dialog>
+    <dialog open class="project-dialog" id="hfa14-dialog" aria-labelledby="hfa14-title"><div class="dialog-top mono"><span>RESEARCH NOTE / 03</span><button class="dialog-close" type="button" aria-label="Close research note">CLOSE <span aria-hidden="true">×</span></button></div><div class="dialog-body"><p class="section-index mono">ONGOING RESEARCH · CMOS</p><h2 id="hfa14-title" tabindex="-1">HFA14 adder design<span class="period">.</span></h2><p class="dialog-lede">Circuit-level research,<br><span>in progress.</span></p><p>An ongoing research effort in CMOS adder design. Technical details and results are reserved for future publication.</p><div class="project-flow" aria-label="HFA14 public research context"><span>CMOS</span><span>ADDER DESIGN</span><span>ONGOING STUDY</span><span>FUTURE PUBLICATION</span></div>
+ <div class="project-detail-grid">
+ <section><span class="mono">A / CONTEXT</span><h3>A fundamental building block</h3><p>Adders are part of the arithmetic foundation of digital systems. Their behavior at the circuit level connects transistor-scale choices to larger hardware designs.</p></section>
+ <section><span class="mono">B / INTEREST</span><h3>Understanding circuit behavior</h3><p>HFA14 sits within my interest in CMOS circuits and the relationship between functional behavior and implementation choices.</p></section>
+ <section><span class="mono">C / STATUS</span><h3>Research in progress</h3><p>The project is an ongoing research effort. Its public entry currently provides context and status, with further material planned for future publication.</p></section>
+ <section><span class="mono">D / CONTACT</span><h3>Start a conversation</h3><p>For a research conversation or collaboration inquiry, reach me at <a href="mailto:bsnanda2003@gmail.com">bsnanda2003@gmail.com</a>.</p></section>
+ </div><p class="project-detail-note">Schematics, device dimensions, novel design details and unpublished results are reserved for future publication.</p><div class="dialog-summary"><span class="mono">PUBLIC NOTE</span><p>Further information will be added when it is ready to be shared.</p></div><div class="tags"><span>CMOS</span><span>CIRCUIT DESIGN</span><span>RESEARCH</span></div></div></dialog>
   </div>
-  <footer class="wrap"><span>© <span id="year">2026</span> Nandakumar</span><span>VLSI Design · Chennai</span><a href="#home">Back to top</a></footer>
 </body>
 </html>
